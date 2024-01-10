@@ -1,0 +1,12 @@
+- hosts: web
+  roles:
+    - common
+    - web
+- hosts: db
+  roles:
+    - common
+    - database
+- hosts: lb
+  roles:
+    - common
+    - loadbalancer

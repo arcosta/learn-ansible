@@ -1,0 +1,11 @@
+- name: Create a database
+  mysql_db:
+    name: learnansible
+    state: present
+
+- name: Create app user
+  mysql_user:
+    name: {{userdb}}
+    password: {{passworddb}}
+    priv: '*.*:ALL'
+    state: present
