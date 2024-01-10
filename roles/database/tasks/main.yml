@@ -1,0 +1,12 @@
+---
+- name: Create a MySQL database container
+  community.docker.docker_container:
+    name: mysql
+    image: mysql
+    #volumes:
+    #  - /data
+    state: present
+    exposed_ports:
+      - 5506
+    networks:
+      - name: "{{ ptivate_network_name }}"

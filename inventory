@@ -1,0 +1,10 @@
+[web]
+webserver1
+webserver2
+webserver3
+
+[database]
+db1
+
+[lb]
+loadbalacer1

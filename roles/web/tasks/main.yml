@@ -1,0 +1,12 @@
+- name: Create a Flask container
+  community.docker.docker_container:
+    name: web_app
+    image: python-flask
+    #volumes:
+    #  - /data
+    state: present
+    exposed_ports:
+      - 5000
+    networks:
+      - name: "{{ ptivate_network_name }}"
+    command: ["/bin/sh", "entrypoint.sh"]

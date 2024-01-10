@@ -1,0 +1,14 @@
+---
+# This playbook deploys an entire stack of an web application
+
+- hosts: web
+  roles:
+    - common
+    - web
+- hosts: database
+  roles:
+    - common
+    - database
+- hosts: lb
+  roles:
+    - loadbalancer
